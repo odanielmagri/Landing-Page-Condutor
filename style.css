@@ -1,30 +1,97 @@
-/* Identidade Condutor: azul estrutural, amarelo de sinalização, dourado institucional e preto. */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@600;700;800&display=swap');
-:root { --blue: #075bb5; --blue-dark: #033d7b; --yellow: #f5d400; --gold: #c99b25; --black: #17191c; --muted: #4d535b; --paper: #fff; }
+/* Direção: Google Clean — minimalismo funcional, branco amplo, azul de ação e acentos cromáticos discretos. */
+:root {
+  --ink: #202124;
+  --muted: #5f6368;
+  --line: #dadce0;
+  --blue: #1a73e8;
+  --blue-dark: #1558b0;
+  --yellow: #f4e500;
+  --surface: #ffffff;
+  --page: #f8f9fa;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
 * { box-sizing: border-box; }
-html, body { min-width: 320px; min-height: 100%; }
-body { margin: 0; background: #edf1f5; color: var(--black); font-family: 'DM Sans', Arial, sans-serif; }
-.brand-page { width: min(100%, 760px); margin: 0 auto; background: var(--paper); overflow: hidden; }
-.brand-hero { position: relative; height: 360px; display: grid; place-items: center; padding: 30px; background: url('/manus-storage/ONIXAUTOESCOLA_e0b6115d.jpeg') center / cover no-repeat; border-bottom: 10px solid var(--blue); clip-path: polygon(0 0, 100% 0, 100% 94%, 50% 100%, 0 94%); }
-.hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(3,61,123,.82), rgba(7,91,181,.22) 65%, rgba(0,0,0,.3)); }
-.brand-logo { position: relative; z-index: 1; width: min(100%, 650px); max-height: 210px; object-fit: contain; filter: drop-shadow(0 3px 0 rgba(0,0,0,.45)); }
-.hero-tag { position: absolute; z-index: 2; right: 26px; bottom: 28px; padding: 8px 12px; background: var(--yellow); color: var(--black); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-.review-content { padding: 54px clamp(24px, 7vw, 72px) 46px; text-align: center; }
-.eyebrow { margin: 0 0 15px; color: var(--blue); font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
-h1 { max-width: 650px; margin: 0 auto; font-family: 'Montserrat', Arial, sans-serif; font-size: clamp(34px, 6vw, 58px); line-height: 1.08; letter-spacing: -.045em; font-weight: 800; }
-h1 span, .closing span { color: var(--blue); }
-.gold-rule { width: 72px; height: 5px; margin: 25px auto 26px; background: var(--gold); }
-.supporting-copy { max-width: 545px; margin: 0 auto; color: var(--muted); font-size: clamp(17px, 2.3vw, 22px); line-height: 1.45; }
-.stars { margin: 28px 0 25px; color: var(--yellow); font-size: clamp(39px, 7vw, 58px); line-height: 1; letter-spacing: .08em; text-shadow: 1px 2px 0 #b88c13; }
-.review-button { display: flex; align-items: center; gap: 16px; width: 100%; min-height: 78px; padding: 18px 28px; border: 3px solid var(--blue-dark); border-radius: 16px; background: var(--blue); color: #fff; font-family: 'Montserrat', Arial, sans-serif; font-size: clamp(18px, 3vw, 27px); font-weight: 700; text-decoration: none; transition: background-color 160ms ease, transform 160ms ease; }
-.review-button:hover { background: var(--blue-dark); }
-.review-button:active { transform: scale(.985); }
-.review-button:focus-visible { outline: 3px solid var(--yellow); outline-offset: 4px; }
-.google-mark { width: 45px; height: 45px; flex: 0 0 auto; padding: 7px; border-radius: 50%; background: #fff; }
-.arrow { margin-left: auto; font-size: 38px; line-height: 1; }
-.reassurance { display: flex; justify-content: center; margin-top: 32px; border: 1px solid #d8dde4; border-radius: 14px; color: var(--muted); text-align: left; }
-.reassurance span { flex: 1; padding: 18px 16px; font-size: 13px; line-height: 1.3; }
-.reassurance span + span { border-left: 1px solid #d8dde4; }
-.closing { margin: 40px 0 0; font-family: 'Montserrat', Arial, sans-serif; font-size: clamp(18px, 3vw, 26px); font-weight: 700; }
-@media (max-width: 560px) { .brand-hero { height: 245px; padding: 18px; border-bottom-width: 8px; } .brand-logo { max-height: 135px; } .hero-tag { right: 14px; bottom: 21px; font-size: 9px; } .review-content { padding: 40px 19px 32px; } h1 { font-size: clamp(33px, 9vw, 46px); } .supporting-copy { font-size: 16px; } .stars { font-size: 40px; letter-spacing: .03em; } .review-button { min-height: 65px; padding: 14px 17px; gap: 10px; font-size: 16px; border-radius: 12px; } .google-mark { width: 36px; height: 36px; padding: 6px; } .arrow { font-size: 28px; } .reassurance { flex-direction: column; } .reassurance span + span { border-top: 1px solid #d8dde4; border-left: 0; } }
-@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; } }
+html { min-width: 320px; background: var(--page); }
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--ink);
+  background: var(--page);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+.page-shell {
+  width: 100%;
+  max-width: 560px;
+  min-height: 100svh;
+  margin: 0 auto;
+  padding: 28px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.color-dots {
+  display: flex;
+  gap: 7px;
+  justify-content: center;
+  margin: 0 auto 22px;
+}
+.dot { width: 8px; height: 8px; border-radius: 50%; display: block; }
+.dot.blue { background: #4285f4; }
+.dot.red { background: #ea4335; }
+.dot.yellow { background: #fbbc04; }
+.dot.green { background: #34a853; }
+
+.review-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 22px 26px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 3px 12px rgba(60, 64, 67, 0.10), 0 1px 3px rgba(60, 64, 67, 0.08);
+  text-align: center;
+  animation: card-in 420ms var(--ease-out) both;
+}
+.brand-lockup { width: 100%; display: flex; justify-content: center; }
+.brand-logo { display: block; width: min(100%, 350px); height: auto; max-height: 128px; object-fit: contain; }
+.yellow-rule { width: 44px; height: 4px; margin: 24px auto 28px; border-radius: 3px; background: var(--yellow); }
+.eyebrow { margin: 0 0 13px; color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+h1 { max-width: 340px; margin: 0; font-size: clamp(28px, 8vw, 38px); line-height: 1.11; letter-spacing: -0.035em; font-weight: 700; }
+.supporting-copy { max-width: 310px; margin: 17px 0 0; color: var(--muted); font-size: 16px; line-height: 1.5; }
+.stars { display: flex; gap: 5px; margin: 23px 0 26px; color: #fbbc04; font-size: 22px; line-height: 1; }
+.review-button {
+  width: 100%;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 18px;
+  border-radius: 28px;
+  background: var(--blue);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(26, 115, 232, 0.25);
+  transition: transform 160ms var(--ease-out), background-color 160ms var(--ease-out), box-shadow 160ms var(--ease-out);
+}
+.review-button:hover { background: var(--blue-dark); box-shadow: 0 4px 10px rgba(26, 115, 232, 0.27); }
+.review-button:active { transform: scale(.975); }
+.review-button:focus-visible { outline: 3px solid rgba(26, 115, 232, .35); outline-offset: 3px; }
+.google-g { width: 23px; height: 23px; display: inline-grid; place-items: center; border-radius: 50%; background: #fff; color: var(--blue); font-size: 15px; font-weight: 700; }
+.arrow { margin-left: auto; font-size: 22px; font-weight: 400; line-height: 1; }
+.fine-print { margin: 20px 0 0; color: var(--muted); font-size: 12px; line-height: 1.45; }
+.site-footer { display: flex; justify-content: center; align-items: center; gap: 7px; padding-top: 18px; color: var(--muted); font-size: 12px; }
+.footer-mark { color: var(--yellow); font-size: 14px; }
+
+@keyframes card-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@media (min-width: 560px) { .page-shell { padding-top: 42px; padding-bottom: 34px; } .review-card { padding: 42px 42px 34px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
