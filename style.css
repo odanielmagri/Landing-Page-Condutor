@@ -1,471 +1,283 @@
+/*
+  Identidade Condutor:
+  azul estrutural, amarelo de sinalização,
+  dourado institucional e preto.
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@600;700;800&display=swap');
 
-/* =========================================
-IDENTIDADE VISUAL — AUTO ESCOLA CONDUTOR
-Azul estrutural
-Amarelo de sinalização
-Dourado institucional
-Preto
-========================================= */
-
 :root {
---blue: #075bb5;
---blue-dark: #033d7b;
---yellow: #f5d400;
---gold: #c99b25;
---black: #17191c;
---muted: #4d535b;
---paper: #ffffff;
+  --blue: #075bb5;
+  --blue-dark: #033d7b;
+  --yellow: #f5d400;
+  --gold: #c99b25;
+  --black: #17191c;
+  --muted: #4d535b;
+  --paper: #fff;
 }
-
-/* RESET */
 
 * {
   box-sizing: border-box;
-  }
+}
 
 html,
 body {
-min-width: 320px;
-min-height: 100%;
+  min-width: 320px;
+  min-height: 100%;
 }
 
 body {
-margin: 0;
-background: #edf1f5;
-color: var(--black);
-font-family: 'DM Sans', Arial, sans-serif;
+  margin: 0;
+  background: #edf1f5;
+  color: var(--black);
+  font-family: 'DM Sans', Arial, sans-serif;
 }
-
-/* =========================================
-PÁGINA
-========================================= */
 
 .brand-page {
-width: min(100%, 760px);
-margin: 0 auto;
-background: var(--paper);
-overflow: hidden;
+  width: min(100%, 760px);
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--paper);
 }
-
-/* =========================================
-HERO
-========================================= */
 
 .brand-hero {
-position: relative;
-
-height: 360px;
-
-display: grid;
-place-items: center;
-
-padding: 30px;
-
-background:
-url('./assets/ONIXAUTOESCOLA.jpeg')
-center / cover no-repeat;
-
-border-bottom: 10px solid var(--blue);
-
-clip-path: polygon(
-0 0,
-100% 0,
-100% 94%,
-50% 100%,
-0 94%
-);
+  position: relative;
+  display: grid;
+  height: 360px;
+  place-items: center;
+  padding: 30px;
+  background: url('./assets/ONIXAUTOESCOLA.jpeg') center / cover no-repeat;
+  border-bottom: 10px solid var(--blue);
+  clip-path: polygon(0 0, 100% 0, 100% 94%, 50% 100%, 0 94%);
 }
-
-/* Overlay azul sobre a foto */
 
 .hero-overlay {
-position: absolute;
-inset: 0;
-
-background:
-linear-gradient(
-135deg,
-rgba(3, 61, 123, 0.82),
-rgba(7, 91, 181, 0.22) 65%,
-rgba(0, 0, 0, 0.30)
-);
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(3, 61, 123, 0.82),
+    rgba(7, 91, 181, 0.22) 65%,
+    rgba(0, 0, 0, 0.3)
+  );
 }
-
-/* LOGO */
 
 .brand-logo {
-position: relative;
-z-index: 1;
-
-width: min(100%, 650px);
-max-height: 210px;
-
-object-fit: contain;
-
-filter:
-drop-shadow(
-0 3px 0 rgba(0, 0, 0, 0.45)
-);
+  position: relative;
+  z-index: 1;
+  width: min(100%, 650px);
+  max-height: 210px;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 0 rgba(0, 0, 0, 0.45));
 }
-
-/* FRASE DO HERO */
 
 .hero-tag {
-position: absolute;
-z-index: 2;
-
-right: 26px;
-bottom: 28px;
-
-padding: 8px 12px;
-
-background: var(--yellow);
-color: var(--black);
-
-font-size: 11px;
-font-weight: 700;
-
-letter-spacing: 0.08em;
-text-transform: uppercase;
+  position: absolute;
+  right: 26px;
+  bottom: 28px;
+  z-index: 2;
+  padding: 8px 12px;
+  background: var(--yellow);
+  color: var(--black);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
-
-/* =========================================
-CONTEÚDO
-========================================= */
 
 .review-content {
-padding:
-54px
-clamp(24px, 7vw, 72px)
-46px;
-
-text-align: center;
+  padding: 54px clamp(24px, 7vw, 72px) 46px;
+  text-align: center;
 }
-
-/* TEXTO PEQUENO SUPERIOR */
 
 .eyebrow {
-margin: 0 0 15px;
-
-color: var(--blue);
-
-font-size: 13px;
-font-weight: 700;
-
-letter-spacing: 0.1em;
-text-transform: uppercase;
+  margin: 0 0 15px;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
-
-/* TÍTULO */
 
 h1 {
-max-width: 650px;
-
-margin: 0 auto;
-
-font-family: 'Montserrat', Arial, sans-serif;
-
-font-size: clamp(34px, 6vw, 58px);
-
-line-height: 1.08;
-
-letter-spacing: -0.045em;
-
-font-weight: 800;
+  max-width: 650px;
+  margin: 0 auto;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: clamp(34px, 6vw, 58px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
 }
-
-/* PALAVRAS EM AZUL */
 
 h1 span,
 .closing span {
-color: var(--blue);
+  color: var(--blue);
 }
-
-/* LINHA DOURADA */
 
 .gold-rule {
-width: 72px;
-height: 5px;
-
-margin: 25px auto 26px;
-
-background: var(--gold);
+  width: 72px;
+  height: 5px;
+  margin: 25px auto 26px;
+  background: var(--gold);
 }
-
-/* TEXTO PRINCIPAL */
 
 .supporting-copy {
-max-width: 545px;
-
-margin: 0 auto;
-
-color: var(--muted);
-
-font-size: clamp(17px, 2.3vw, 22px);
-
-line-height: 1.45;
+  max-width: 545px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: clamp(17px, 2.3vw, 22px);
+  line-height: 1.45;
 }
-
-/* =========================================
-ESTRELAS
-========================================= */
 
 .stars {
-margin: 28px 0 25px;
-
-color: var(--yellow);
-
-font-size: clamp(39px, 7vw, 58px);
-
-line-height: 1;
-
-letter-spacing: 0.08em;
-
-text-shadow:
-1px 2px 0 #b88c13;
+  margin: 28px 0 25px;
+  color: var(--yellow);
+  font-size: clamp(39px, 7vw, 58px);
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-shadow: 1px 2px 0 #b88c13;
 }
-
-/* =========================================
-BOTÃO GOOGLE
-========================================= */
 
 .review-button {
-display: flex;
-
-align-items: center;
-
-gap: 16px;
-
-width: 100%;
-
-min-height: 78px;
-
-padding: 18px 28px;
-
-border: 3px solid var(--blue-dark);
-
-border-radius: 16px;
-
-background: var(--blue);
-
-color: #ffffff;
-
-font-family: 'Montserrat', Arial, sans-serif;
-
-font-size: clamp(18px, 3vw, 27px);
-
-font-weight: 700;
-
-text-decoration: none;
-
-transition:
-background-color 160ms ease,
-transform 160ms ease,
-box-shadow 160ms ease;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  min-height: 78px;
+  padding: 18px 28px;
+  border: 3px solid var(--blue-dark);
+  border-radius: 16px;
+  background: var(--blue);
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: clamp(18px, 3vw, 27px);
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 160ms ease, transform 160ms ease;
 }
-
-/* HOVER */
 
 .review-button:hover {
-background: var(--blue-dark);
-
-box-shadow:
-0 8px 20px rgba(3, 61, 123, 0.22);
+  background: var(--blue-dark);
 }
-
-/* CLICK */
 
 .review-button:active {
-transform: scale(0.985);
+  transform: scale(0.985);
 }
-
-/* ACESSIBILIDADE */
 
 .review-button:focus-visible {
-outline: 3px solid var(--yellow);
-outline-offset: 4px;
+  outline: 3px solid var(--yellow);
+  outline-offset: 4px;
 }
-
-/* LOGO GOOGLE */
 
 .google-mark {
-width: 45px;
-height: 45px;
-
-flex: 0 0 auto;
-
-padding: 7px;
-
-border-radius: 50%;
-
-background: #ffffff;
+  width: 45px;
+  height: 45px;
+  flex: 0 0 auto;
+  padding: 7px;
+  border-radius: 50%;
+  background: #fff;
 }
-
-/* SETA */
 
 .arrow {
-margin-left: auto;
-
-font-size: 38px;
-
-line-height: 1;
+  margin-left: auto;
+  font-size: 38px;
+  line-height: 1;
 }
 
-/* =========================================
-INFORMAÇÕES
-========================================= */
-
 .reassurance {
-display: flex;
-
-justify-content: center;
-
-margin-top: 32px;
-
-border: 1px solid #d8dde4;
-
-border-radius: 14px;
-
-color: var(--muted);
-
-text-align: left;
-
-overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  border: 1px solid #d8dde4;
+  border-radius: 14px;
+  color: var(--muted);
+  text-align: left;
 }
 
 .reassurance span {
-flex: 1;
-
-padding: 18px 16px;
-
-font-size: 13px;
-
-line-height: 1.3;
+  flex: 1;
+  padding: 18px 16px;
+  font-size: 13px;
+  line-height: 1.3;
 }
 
 .reassurance span + span {
-border-left: 1px solid #d8dde4;
+  border-left: 1px solid #d8dde4;
 }
-
-/* =========================================
-MENSAGEM FINAL
-========================================= */
 
 .closing {
-margin: 40px 0 0;
-
-font-family: 'Montserrat', Arial, sans-serif;
-
-font-size: clamp(18px, 3vw, 26px);
-
-font-weight: 700;
+  margin: 40px 0 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: clamp(18px, 3vw, 26px);
+  font-weight: 700;
 }
-
-/* =========================================
-CELULAR
-========================================= */
 
 @media (max-width: 560px) {
+  .brand-hero {
+    height: 245px;
+    padding: 18px;
+    border-bottom-width: 8px;
+  }
 
-.brand-hero {
-height: 245px;
+  .brand-logo {
+    max-height: 135px;
+  }
 
-```
-padding: 18px;
+  .hero-tag {
+    right: 14px;
+    bottom: 21px;
+    font-size: 9px;
+  }
 
-border-bottom-width: 8px;
-```
+  .review-content {
+    padding: 40px 19px 32px;
+  }
 
+  h1 {
+    font-size: clamp(33px, 9vw, 46px);
+  }
+
+  .supporting-copy {
+    font-size: 16px;
+  }
+
+  .stars {
+    font-size: 40px;
+    letter-spacing: 0.03em;
+  }
+
+  .review-button {
+    min-height: 65px;
+    padding: 14px 17px;
+    gap: 10px;
+    border-radius: 12px;
+    font-size: 16px;
+  }
+
+  .google-mark {
+    width: 36px;
+    height: 36px;
+    padding: 6px;
+  }
+
+  .arrow {
+    font-size: 28px;
+  }
+
+  .reassurance {
+    flex-direction: column;
+  }
+
+  .reassurance span + span {
+    border-top: 1px solid #d8dde4;
+    border-left: 0;
+  }
 }
-
-.brand-logo {
-max-height: 135px;
-}
-
-.hero-tag {
-right: 14px;
-bottom: 21px;
-
-```
-font-size: 9px;
-```
-
-}
-
-.review-content {
-padding:
-40px
-19px
-32px;
-}
-
-h1 {
-font-size: clamp(33px, 9vw, 46px);
-}
-
-.supporting-copy {
-font-size: 16px;
-}
-
-.stars {
-font-size: 40px;
-
-```
-letter-spacing: 0.03em;
-```
-
-}
-
-.review-button {
-min-height: 65px;
-
-```
-padding: 14px 17px;
-
-gap: 10px;
-
-font-size: 16px;
-
-border-radius: 12px;
-```
-
-}
-
-.google-mark {
-width: 36px;
-height: 36px;
-
-```
-padding: 6px;
-```
-
-}
-
-.arrow {
-font-size: 28px;
-}
-
-.reassurance {
-flex-direction: column;
-}
-
-.reassurance span + span {
-border-top: 1px solid #d8dde4;
-border-left: 0;
-}
-}
-
-/* =========================================
-REDUÇÃO DE MOVIMENTO
-========================================= */
 
 @media (prefers-reduced-motion: reduce) {
-
-*,
-*::before,
-*::after {
-transition-duration: 0.01ms !important;
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
 }
-}
-
